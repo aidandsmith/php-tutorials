@@ -1,0 +1,49 @@
+* {
+ box-sizing: border-box;
+}
+
+body {
+    font-family:'Courier New', Courier, monospace;
+    width: 80ch;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;    
+}
+
+form label {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+form input {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 1rem;
+
+}
+
+form select {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 1rem;
+}
+
+form input[type="submit"] {
+    background: #b121b1;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 800;
+    color: white;
+    width: 50%;
+    margin: 0 auto;
+}
