@@ -33,7 +33,7 @@
         // echo strtotime('now');
         $specificDate = strtotime('now');
         echo date ('l d, Y g:i a', $specificDate);
-        $specificDate = strtotime('august 9, 2002');
+        $specificDate = strtotime('august 1, 2024');
         echo date ('l d, Y g:i a', $specificDate);
     ?>
     <h2>How many days between dates</h2>
@@ -41,7 +41,7 @@
         $today = strtotime('today');
         echo $today;
         
-        $birthday = strtotime('august 9, 2002');
+        $birthday = strtotime('september 1, 2024');
         $dateDifference = $today - $birthday;
 
         echo "<br>".$dateDifference;

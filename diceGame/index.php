@@ -11,6 +11,8 @@
         <h1>Dice Game</h1>
         <div class="roll">
             <?php
+                // Variables to store total dice rolls for each player
+                // Randomly generates nu
                 // echo rand(1,6); //min = 1 max = 10
                 $dice1roll1 = rand(1,6);
                 $dice1roll2 = rand(1,6);
@@ -25,6 +27,7 @@
                 // echo "<br>"."DEALERS DICE: "."Dice One: ".$dice2roll1." "."dice two: ".$dice2roll2." "."for a total of ".$totalroll2;
             ?>
         </div>
+        <!-- After roll we insert the associate number of the roll with the image - naming is important! -->
         <div class="dice">
             <h2>Your roll</h2>
             <img src="dice-images/dice-<?php echo $dice1roll1;?>.png" alt="A face of a dice showing <?php echo $dice1roll1;?> pip(s)">
@@ -39,6 +42,7 @@
         </div>
 
         <div class="totalroll">
+            <!-- Conditional statements to determine winner, and display on screen  -->
             <?php
                 if ($totalroll1 < $totalroll2){
                     echo "The winner is the Computer";
