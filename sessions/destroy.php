@@ -1,6 +1,7 @@
 <?php 
-    // Initalizing a session
     session_start();
+    // Destroying our fname session
+    session_destroy();
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sessions</title>
+    <title>Sessions | Change name</title>
     <style>
         * {
             box-sizing: border-box;
@@ -37,23 +38,7 @@
 </head>
 <body>
     <h1>Welcome to my website!</h1>
-    <?php 
-        if(isset($_SESSION['fname'])){
-            // If the session named fname exists...
-            echo "<h2>Welcome back, ".$_SESSION['fname'].".</h2>";
-            echo '<a href="destroy.php">Change your name</a>';
-        }
-        //Else statement opened here
-        else{
-            
-    ?>
-    <h2>Please enter your name:</h2>
-    <form method="post" action="setname.php">
-        <label for="name">Your first name:</label>
-        <input required placeholder="Enter your first name!" type="text" name="firstName">
-        <input type="submit" name="submit" value="Enter">
-    </form>
-    <!-- Closing out the else statement from line 39  so we dont have to echo the whole form -->
-    <?php } ?>
+    <h2>Your name has been reset.</h2>
+    <a href="index.php">Enter a new name</a>
 </body>
 </html>
