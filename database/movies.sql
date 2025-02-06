@@ -2,8 +2,7 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Feb 03, 2025 at 09:48 AM
+-- Generation Time: Feb 06, 2025 at 09:23 AM
 -- Server version: 10.6.19-MariaDB
 -- PHP Version: 8.1.31
 
@@ -20,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `movies`
 --
-CREATE DATABASE IF NOT EXISTS `movies` DEFAULT CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci;
-USE `movies`;
 
 -- --------------------------------------------------------
 
@@ -51,12 +48,15 @@ INSERT INTO `movies` (`id`, `title`, `genre`, `year`, `runtime`, `watched`) VALU
 (6, 'Jaws', 'thriller', '1975', 124, 'no'),
 (7, 'The Sound of Music', 'adventure', '1965', 174, 'no'),
 (8, 'Back to the Future', 'adventure', '1985', 116, 'no'),
-(9, 'Ghostbusters', 'comedy', '1984', 105, 'no');
+(9, 'Ghostbusters', 'comedy', '1984', 105, 'no'),
+(10, 'The Lost World: Jurassic Park', 'adventure', '1997', 129, 'yes'),
+(11, 'Superbad', 'comedy', '2007', 114, 'yes'),
+(12, 'Inception', 'thriller', '2010', 148, 'yes'),
+(13, 'Shutter Island', 'thriller', '2010', 138, 'yes');
 
 --
 -- Indexes for dumped tables
 --
-
 --
 -- Indexes for table `movies`
 --
@@ -71,7 +71,7 @@ ALTER TABLE `movies`
 -- AUTO_INCREMENT for table `movies`
 --
 ALTER TABLE `movies`
-  MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

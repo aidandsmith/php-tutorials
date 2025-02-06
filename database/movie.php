@@ -1,7 +1,7 @@
 <?php
     $server = 'localhost';
     $username = 'admin'; // username for DB
-    $password = '1234567'; // password for DB admin
+    $password = '123456'; // password for DB admin
     $database = 'movies';
 
     $connect = mysqli_connect($server,$username,$password,$database);
@@ -11,7 +11,9 @@
         die(mysqli_connect_error()); // kills connection, wont render html
     }
 
-    $query = 'SELECT * FROM movies WHERE id=1';
+    $id = $_GET['id'];
+
+    $query = "SELECT * FROM movies WHERE id=$id";
     $sql = mysqli_query($connect,$query);
     $row = mysqli_fetch_array($sql);
 ?>
